@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="text-center">
+    <!-- Clock Box -->
+    <div class="clock-box">
+      <!-- Clock -->
+      <div id="clockDisplay" class="clock-display"></div>
+      <!-- Set Alarm -->
+      <div class="setAlarmRow">
+        <input type="number" id="hr" onchange="hourChange()" min="0" max="12" placeholder="HR">
+        :
+        <input type="number" id="min" onchange="minChange()" min="0" max="59" placeholder="MIN">
+        :
+        <input type="number" id="sec" onchange="secChange()" min="0" max="59" placeholder="SEC">
+        &nbsp;
+        <select id="dayNight">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        &nbsp;&nbsp;
+        <button class="setAlarm" onclick="setAlarm()">Set Alarm</button>
+      </div>
+
+      <!-- List of Alarms -->
+      <div id="alarmList" class="alarm-list scroll"></div>
+    </div>
+  </div>
+  <!-- Alarm Box -->
+  <div id="alarmRingRow">
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

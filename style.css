@@ -1,0 +1,172 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(125deg, yellow, red, orange);
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Clock Box Styling */
+.clock-box {
+  background-color: #f4f4f4;
+  padding: 100px;
+  border-radius: 10%;
+  box-shadow: 0 0 50px black;
+  max-height: 50vh;
+}
+
+/* Clock */
+.clock-display {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Set Alarm */
+.setAlarmRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  font-size: 16px;
+  width: 36px;
+  height: fit-content;
+  text-align: center;
+}
+
+select {
+  font-size: 16px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+/* Remove Arrow from Input Type Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Set Alarm Button */
+.setAlarm {
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Alarm List */
+.alarm-list {
+  margin-top: 20px;
+  overflow: scroll;
+  max-height: 40vh;
+}
+
+/* Each Alarm */
+.alarm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* First Alarm */
+.alarm-item:nth-child(1) {
+  border-top: 1px solid #ccc;
+}
+
+/* Delete Alarm Button */
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Alarm Ring Box */
+#alarmRingRow {
+  position: absolute;
+}
+
+#alarmRingRowBox1 {
+  position: relative;
+}
+
+#alarmRingRowBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #f4f4f4;
+  padding: 120px;
+  border-radius: 10%;
+  box-shadow: 0 0 50px black;
+  text-align: center;
+}
+
+audio {
+  display: none;
+}
+
+/* animation for clock image */
+@keyframes ringing_bell {
+  0% {
+      transform: rotate(-15deg);
+  }
+
+  50% {
+      transform: rotate(15deg);
+  }
+
+  100% {
+      transform: rotate(-15deg);
+  }
+}
+
+/* Alarm Ring Image */
+.alarmImg {
+  height: 100px;
+  width: auto;
+  animation-name: ringing_bell;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* scroll container scroll bar */
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Stop Alarm Button */
+.stop-alarm-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 7px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500; 
+}
